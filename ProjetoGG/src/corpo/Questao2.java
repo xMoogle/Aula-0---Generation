@@ -1,51 +1,48 @@
 package corpo;
+
 import java.util.ArrayList;
-import java.util.List;
 
-public class Questao2 
+public class Questao2 extends Questao
 {
- public String enunciado;
- public List<String> alternativas;
- public String feedbackE;
- public String feedbackC;
- 
- public Questao2()
- {
-	this.enunciado = "Cadu é viado?";
-	this.alternativas = new ArrayList<String>();
-	alternativas.add("a) Sim");
-	alternativas.add("b) Claro!");
-	alternativas.add("c) Com certeza!");
- }
- 
-  public void execute() 
-  {
-	 System.out.println(enunciado);
-	 for (String alternativa : alternativas) 
-	 {
-		System.out.println(alternativa);
-	 }
-	 String resposta;
-	 resposta = Scanner.ler();
-	 String feedback = getFeedback(resposta);
-	 System.out.println(feedback);
 	 
-	
-  }
 
-private String getFeedback(String resposta) 
-{
-	if(taCerto(resposta)) 
+	@Override
+	public String getEnunciado() 
 	{
-		return "Tá certo";
+		return "Questão 02 - Quiz ConscientizaGen\nA produção de lixo é inevitavel na forma como a nossa sociedade se organiza. A geração de resíduos sólidos vem aumentando no Brasil ao longo dos anos.\r\n"
+				+ "Os dados mais recentes de geração destes resíduos aponta que em 2018, no Brasil,  foram geradas:";
 	}
-	else return "Errado não tá";
-    }
 
-private boolean taCerto(String resposta) 
-  {
-	return resposta.equals("b");	
-  }
+	@Override
+	public ArrayList<String> getAlternativas() 
+	{   
+		ArrayList<String> alternativas = new ArrayList<String>();
+		alternativas.add("a) 7,9 toneladas");
+		alternativas.add("b) 79 toneladas");
+		alternativas.add("c) 79 mil toneladas");
+		alternativas.add("d) 79 milhões de toneladas");
+		alternativas.add("e) 7 toneladas");
+		return alternativas;
+	}
+	
+	@Override
+	public String getAlternativaCorreta() 
+	{
+		return "d";
+	}
+	
+	@Override
+	public String getFeedbackC() 
+	{
+		return "\nResposta correta!\n"
+				+ "De acordo com os dados do Panorama dos Resíduos sólidos da Abrelpe foram geradas 79 milhões de toneladas de resíduos sólidos urbanos,\n"
+				+ "um aumento de pouco menos de 1% em relação ao ano anterior.\n\n";
+	}
 
+	@Override
+	public String getFeedbackE() 
+	{
+		return "\nResposta incorreta!\nDe acordo com os dados do Panorama dos Resíduos sólidos da Abrelpe o número é ainda maior! Tenta novamente!";
+	}
 
 }
