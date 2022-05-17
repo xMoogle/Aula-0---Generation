@@ -512,6 +512,7 @@ public class perfilusuariosii
     	while(continueLoop);
     	System.out.println("\n\nAgora que você já traçou seu perfil de hábitos do dia a dia, preparamos para você um quiz para testar seus conhecimentos em relação ao quanto você conhece sobre os impactos ambientais.\n");
     	System.out.println("\nInsira qualquer letra e tecle enter pra continuar...");
-    	System.in.read();
+    	String a;
+    	a = leia.next();
     }
     }

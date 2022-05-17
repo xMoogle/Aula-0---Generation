@@ -35,22 +35,11 @@ public class ColetaDados {
 	//função para obter os dados fornecidos para o usuário
 	public void pegaDados() {
 		boolean continueLoop = true;
-		int i=0;
-	do {
+	    do {
 		try {
-				while(i==0) {
+			   
 				System.out.println("\nInsira seu nome completo: ");
 				a = leia.nextLine();
-				Pattern p=Pattern.compile("[A-Z][a-z]{0,20}\\s[A-Z][-a-zA-Z]{0,40}");
-				Matcher m=p.matcher(a);
-				if(m.find()) {
-					i=1;
-				}
-				else {
-					System.out.println("\nSeu nome não deve ter caracteres especiais!");
-				}
-				
-				}
 				System.out.println("\nInsira sua idade: ");
 				b = leia.nextInt();
 				
@@ -65,7 +54,8 @@ public class ColetaDados {
 				e = leia.nextDouble();
 				continueLoop = false;
 				
-		}
+		
+				}
 		catch(InputMismatchException inp) {
 			leia.nextLine();
 			System.out.println("\nEntrada incorreta, insira novamente os dados requisitados!\n");
