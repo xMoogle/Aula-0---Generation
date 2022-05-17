@@ -6,7 +6,9 @@ public class ConscientizaGen
 {
 
 	public static void main(String[] args)  throws IOException
-	{
+	{ 
+		
+		System.out.println("Seja bem vindo ao ConscientizaGen! Vamos falar um pouco sobre meio ambiente?");
 		// 1o PARTE
 				//iniciação da classe com dados nulos
 				//aqui eu crio um objeto temporário só para poder chamar o método pegaDados, assim obter
@@ -70,6 +72,12 @@ public class ConscientizaGen
 		questao4.execute();
 		questao5.execute();
 		questao5.encerramento();
+		System.out.println("\n"
+			+ "Muito obrigado por executar a aplicação ConscientizaGen, versão 1.0.0.\r\n"
+			+ "	Esperamos que sua experiência de usuário tenha sido agradável, e que tenhamos adicionado conhecimentos relevantes, também, à sua experiência cidadã. Não se esqueça de deixar o seu feedback: ele é muito importante para nós.\r\n"
+			+ "	É muito comum pensarmos que nossas ações enquanto indivíduos causam pouco ou nenhum impacto no nosso planeta. No entanto, cada um dos indivíduos que carrega consigo essa mentalidade se torna parte exatamente do coletivo que causa muitos desses impactos direta ou indiretamente, pela ação - ou por falta dela.\r\n"
+			+ "	Você deseja saber mais sobre esse assunto e gostaria de AGIR em prol dessa causa? Acesse www.conscientiza.gen.br e expanda a sua jornada por um mundo mais sustentável!\r\n"
+			+ "‘Goodbye, World!’");
 		//Quiz acaba aqui
 		
 		// FINAL
