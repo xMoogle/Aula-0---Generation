@@ -46,4 +46,5 @@ public int getRg() {
 public void setRg(int rg) {
 	this.rg = rg;
 }
+
 }
